@@ -24,7 +24,7 @@ app.post("/compute", (request, response) => {
         console.log("[SERVER]: Invalid input: ", game);
         return response.status(400).send("Invalid input");
     }
-    console.log("[SERVER]: Valid input received: ", game);
+    // console.log("[SERVER]: Valid input received: ", game);
 
     // Compute the score and send out as a valid 200 OK response
     const score = compute(game);
