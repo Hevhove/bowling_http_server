@@ -13,10 +13,10 @@ export function compute(game: Game): number {
         if (frameScore === 10) {
             // Get the next frame and the next next frame
             // || [] is a fallback in case the next frame is undefined
-            const nextFrame = game[i + 1] || [];
-            const nextNextFrame = game[i + 2] || [];
-            const nextRoll = nextFrame[0] || 0;
-            const nextNextRoll = nextFrame[1] !== 0 ? nextFrame[1] : nextNextFrame[0] || 0;
+            const nextFrame = game[i + 1] ?? [];
+            const nextNextFrame = game[i + 2] ?? [];
+            const nextRoll = nextFrame[0] ?? 0;
+            const nextNextRoll = nextFrame[1] !== 0 ? nextFrame[1] : nextNextFrame[0] ?? 0;
             // Strike : 10 points + the number of pins on next 2 rolls
             if (frame[0] === 10) {
                 score += 10 + nextRoll + nextNextRoll;
