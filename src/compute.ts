@@ -7,7 +7,7 @@ export function compute(game: Game): number {
     // Loop over all of the frames and calculate bonusScores
     for (let i = 0; i < game.length; i++) {
         const frame = game[i];
-        const frameScore = game[i].reduce((a, b) => a + b, 0);
+        const frameScore = game[i].reduce((sum, roll) => sum + roll, 0);
 
         // Strike: score 10 points + the number of pins you knock down for the entire next frame.
         if (frameScore === 10) {
