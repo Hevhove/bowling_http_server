@@ -7,6 +7,7 @@
   "main": "index.ts",
   "scripts": {
     "start": "ts-node-dev --no-notify --respawn --transpile-only --ignore-watch node_modules index.ts",
+    "clean": "find ./src -name '*.js' -type f -delete && find ./tests -name '*.js' -type f -delete",
     "typecheck": "tsc --noEmit",
     "test": "jest"
   },
